@@ -140,9 +140,12 @@
         return 'USER' + randomNum; // Concatenate with 'USER'
     }
 
-    // Set the random user ID in the paragraph
-    document.getElementById('user-id').textContent = generateRandomUserId();
+    // Ensure the script runs after the DOM is fully loaded
+    window.onload = function() {
+        document.getElementById('user-id').value = generateRandomUserId();
+    };
 </script>
+
 
 <!--<div class="footer">
     <p>&copy; 2024 CME Group Inc. | <a href="#">Disclaimer</a> | <a href="#">Privacy Notice</a> | <a href="#">Supported Browsers</a></p>
